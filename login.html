@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Electronic Shoping Store</title>
+    <link rel="icon" href="./imagee/Digital.png" type="image/icon type">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="./styles/login.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
+</head>
+<body>
+    <div class="top">
+        <div class="second">
+            <ul>
+              <li><i class="fa-solid fa-location-dot"></i>Find a store <span>|</span></li>
+              <li>Buying guides <span> | </span></li>
+             <li>Contact us</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Search bar  -->
+    <div class="search">
+        <div class="logo">
+            <a href="index.html"><img src="./imagee/Digital.png" alt=""></a>
+        </div>
+        <div id="f">
+                <div class="box">
+                    <input type="text" id="input" placeholder="Find your favourite products">
+                    <div class="searchbtn">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                </div>
+        </div>
+        <div class="rightnav">
+            <ul>
+                <li><a href=""><i class="fa-solid fa-location-dot"></i>Deliver to Hyderabad 500070</a><span> | </span></li>
+                <li><a href=""><i class="fa-solid fa-cart-shopping"></i>Cart</a><span> | </span></li>
+                <li><a href="login.html"><i class="fa-solid fa-user"></i>Login</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Navigation bar -->
+    <div class="nav">
+        <div class="list">
+            <div>mobiles & tablests<i class="fa-solid fa-angle-down"></i></li></div>
+            <div>televisions<i class="fa-solid fa-angle-down"></i></li></div>
+            <div>audio<i class="fa-solid fa-angle-down"></i></li></div>
+            <div>home appliances<i class="fa-solid fa-angle-down"></i></li></div>
+            <div>computers<i class="fa-solid fa-angle-down"></i></li></div>
+            <div>cameras<i class="fa-solid fa-angle-down"></i></li></div>
+            <div>kitchen appliances<i class="fa-solid fa-angle-down"></i></li></div>
+            <div>personal care<i class="fa-solid fa-angle-down"></i></li></div>
+            <div>accessories<i class="fa-solid fa-angle-down"></i></li></div>
+        </div>
+    </div>
+
+    <!-- log in part goes here  -->
+    <div class="login-page">
+        <form class="login-box">
+            <h4>Login / Register</h4>
+            <div class="input-section">
+                <input type="text" name="" id="mobile" placeholder="Enter Mobile Number" required>
+                <br>
+                <input type="submit" value="Proceed" class="button">
+            </div>
+        </form>
+    </div>
+
+    <!-- footer start from heree -->
+    <div class="footer-main"></div>
+</body>
+</html>
+<script>
+    lsdata=localStorage.getItem('data')
+    function proceed(){
+        let storenum=document.querySelector('#mobile').value;
+        let obj={storenum}
+        lsdata.push(obj)
+        localStorage.setItem('data',lsdata)
+    }
+
+</script>

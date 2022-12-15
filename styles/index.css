@@ -5,7 +5,7 @@
 
 }
 .top{
-
+   
     width: 100%;
     height: 40px;
     display: flex;
@@ -26,6 +26,9 @@
   font-weight: bold;
   
 }
+.top li:hover{
+  cursor: pointer;
+}
 
 .second{
   margin-left: 600px;
@@ -37,6 +40,8 @@ i{
 }
 span{
   margin-left: 5px;
+  color: white;
+  
 }
 .search{
   width: 100%;
@@ -111,12 +116,16 @@ span{
   justify-content: space-around;
   list-style: none;
 }
-.rightnav li{
+.rightnav li a{
 margin-top: 8px;
 /* border: 3px solid black; */
 color: white;
 font-weight: bold;
 font-size: 15px;
+text-decoration: none;
+}
+.rightnav li:hover{
+cursor: pointer;
 }
 .rightnav i{
   padding: 10px;
@@ -124,22 +133,36 @@ font-size: 15px;
 
 
 /* Navigation bar  */
-
+.nav{
+  width: 100%;
+  background-color: #003380;
+}
 .nav .list{
+  margin: auto;
+  width: 98%;
   align-items: center;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   background-color: #003380;
   height: 40px;
+  gap: 2px;
+}
+.nav .list div:hover{
+  cursor: pointer;
+  background-color: #e42529;
+  border: 2px solid #e42529;
+
 }
 .list div{
+  
   list-style: none;
   text-transform: uppercase;
   color: white;
   font-size: 13px;
-  font-family: sans-serif;
+  font-family:  Roboto,"system-ui",sans-serif;
   letter-spacing: 1px;
-  font-weight: bold;
+  font-weight: 400;
+  padding: 6px 5px;
 }
 .nav .list div i{
   padding: 6px;
@@ -175,25 +198,75 @@ font-size: 15px;
 
 .enter{
   margin-top: 30px;
-  border: 2px solid red;
   height: 60px;
 }
-.enter h4{
-  font-size: 20px;
-  color: grey;
-  font-family: sans-serif;
-  letter-spacing: 1px;
+.enter h4, .smartwatch h4{
   text-transform: uppercase;
-  margin-top: 20px;
+  margin-top: 10px;
+  margin-left: 30px;
+  color: #333;
+  font-family: Roboto,"system-ui",sans-serif;
+  font-size: 24px;
+  font-weight: 400;
 }
+
 .enter-img{
   margin: center;
-  border: 2px solid red;
   width: 100%;
-  height: 300px;
+  height: 250px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
-img{
-  border: 3px solid blanchedalmond;
+.enter-img img{
+  width: 300px;
+}
+
+
+/* smartwatch section  */
+.smartwatch{
+  width: 100%;
+  height: 400px;
+  /* border: 2px solid red; */
+  margin-top: 10px;
+}
+.smartwatch-container{
+  width: auto;
+  height: 350px;
+  /* border: 2px solid black; */
+  display: flex;
+
+}
+.smartwatch-img{
+  width: 25%;
+  height: 300px;
+  margin: 20px 30px;
+  /* border: 2px solid green; */
+}
+.smartwatch-img img{
+  width: 100%;
+  height: 100%;
+}
+.smartwatch-slider{
+  width: 75%;
+  height: 350px;
+  border: 2px solid blue;
+  margin-top: 10px;
+}
+.smartwatch a{
+  font-size: 15px;
+  text-decoration: none;
+  color: blue;
+  font-weight: 500;
+}
+.smartwatch a:hover{
+  color: #e42529;
+}
+
+
+/* footer part goes here  */
+
+.footer-main{
+  width: 100%;
+  height: 500px;
+  border: 2px solid rebeccapurple;
 }
