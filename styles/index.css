@@ -16,6 +16,8 @@
     margin-left: 420px;
     justify-content: space-between;
     list-style: none;
+    font-weight: 600;
+    font-family:  Roboto,"system-ui",sans-serif;
     /* border: 2px solid black; */
     
 }
@@ -23,7 +25,6 @@
   
   padding: 5px;
   color: white;
-  font-weight: bold;
   
 }
 .top li:hover{
@@ -112,16 +113,18 @@ span{
  
 }
 .rightnav ul{
+  margin-top: 10px;
   display: flex;
   justify-content: space-around;
   list-style: none;
+
 }
 .rightnav li a{
 margin-top: 8px;
-/* border: 3px solid black; */
 color: white;
-font-weight: bold;
 font-size: 15px;
+font-family:  Roboto,"system-ui",sans-serif;
+font-weight: 600;
 text-decoration: none;
 }
 .rightnav li:hover{
@@ -152,6 +155,7 @@ cursor: pointer;
   background-color: #e42529;
   border: 2px solid #e42529;
 
+
 }
 .list div{
   
@@ -161,8 +165,8 @@ cursor: pointer;
   font-size: 13px;
   font-family:  Roboto,"system-ui",sans-serif;
   letter-spacing: 1px;
-  font-weight: 400;
-  padding: 6px 5px;
+  font-weight: 600;
+  padding: 6px 0px;
 }
 .nav .list div i{
   padding: 6px;
@@ -212,6 +216,7 @@ cursor: pointer;
 
 .enter-img{
   margin: center;
+  margin-bottom: 20px;
   width: 100%;
   height: 250px;
   display: flex;
@@ -222,34 +227,40 @@ cursor: pointer;
 }
 
 
+/* great electronic offer  */
+.great-elec{
+  margin-top: 30px;
+  height: 60px;
+  width: 100%;
+}
+
+.great-elec h4{
+  text-transform: uppercase;
+  margin-top: 10px;
+  margin-left: 30px;
+  color: #333;
+  font-family: Roboto,"system-ui",sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.great-img{
+  margin: auto;
+  width: 95%;
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 80px 30px;
+}
+.great-img img{
+  width: 100%;
+  height: 100%;
+
+}
 /* smartwatch section  */
 .smartwatch{
   width: 100%;
   height: 400px;
-  /* border: 2px solid red; */
-  margin-top: 10px;
-}
-.smartwatch-container{
-  width: auto;
-  height: 350px;
-  /* border: 2px solid black; */
-  display: flex;
-
-}
-.smartwatch-img{
-  width: 25%;
-  height: 300px;
-  margin: 20px 30px;
-  /* border: 2px solid green; */
-}
-.smartwatch-img img{
-  width: 100%;
-  height: 100%;
-}
-.smartwatch-slider{
-  width: 75%;
-  height: 350px;
-  border: 2px solid blue;
+  border: 2px solid red;
   margin-top: 10px;
 }
 .smartwatch a{
@@ -261,12 +272,170 @@ cursor: pointer;
 .smartwatch a:hover{
   color: #e42529;
 }
+.smartwatch-container{
+  width: auto;
+  height: 350px;
+  border: 2px solid black;
+  display: flex;
+
+}
+.smartwatch-img{
+  width: 23%;
+  height: 300px;
+  margin: 20px 10px;
+  border: 2px solid green;
+}
+.smartwatch-img img{
+  width: 100%;
+  height: 100%;
+}
+
+
 
 
 /* footer part goes here  */
 
 .footer-main{
   width: 100%;
-  height: 500px;
-  border: 2px solid rebeccapurple;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  background-color: #003380;
+}
+
+.footer-main div:nth-child(1){
+  width: 25%;
+  height: 300px;
+  /* border: 2px solid red; */
+}
+.footer-main div:nth-child(2){
+  width: 25%;
+  height: 300px;
+  /* border: 2px solid red; */
+}
+.footer-main div:nth-child(3){
+  width: 25%;
+  height: 300px;
+  /* border: 2px solid red; */
+}
+.footer-main div:nth-child(4){
+  width: 25%;
+  height: 300px;
+  /* border: 2px solid red; */
+}
+.footer-main div{
+  margin: 20px;
+}
+.footer-main div ul li{
+  
+  color: white;
+  text-decoration: none;
+  list-style-type: none;
+  padding: 5px;
+  font-family: Roboto,"system-ui",sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+
+}
+.footer-main div ul li:hover{
+  cursor: pointer;
+  color: rgb(172, 167, 167);
+}
+#head{
+  font-size: 20px;
+  font-weight: bold;
+}
+.bottom-footer{
+width: 100%;
+height: 40px;
+display: flex;
+background-color: #003380;
+}
+
+.bottom-footer div:nth-child(1){
+width: 25%;
+height: 40px;
+margin-left: 20px;
+color: #fff;
+font-size: 16px;
+font-weight: 700;
+line-height: 1em;
+margin-bottom: 4px;
+text-transform: uppercase;
+font-family: Roboto,"system-ui",sans-serif;
+
+
+}
+
+.bottom-footer div:nth-child(2){
+width: 50%;
+height: 30px;
+color: #fff;
+font-size: 16px;
+font-weight: 700;
+line-height: 1em;
+margin-bottom: 4px;
+text-transform: uppercase;
+font-family: Roboto,"system-ui",sans-serif;
+}
+
+.icon{
+width: 100%;
+height: 40px;
+background-color: #003380;
+display: flex;
+cursor: pointer;
+}
+.icon div:nth-child(1){
+margin-left: 20px;
+width: 25%;
+height: 40px;
+margin-top: -10px;
+cursor: pointer;
+}
+.icon div:nth-child(2){
+cursor: pointer;
+width: 40%;
+height: 40px;
+
+}
+i{
+color: white;
+}
+
+#app{
+display: flex;
+margin-left: 10px;
+gap: 10px;
+}
+#app div:nth-child(1) img{
+margin-left: -30px;
+width: 100%;
+height: 100%;
+}
+#app div:nth-child(2) img{
+margin-top: -10px;
+margin-left: -30px;
+width: 70%;
+height: 100%;
+}
+
+.btm-footer{
+width: 100%;
+height: 150px;
+background-color: #0a244a;
+  font-family: Roboto,"system-ui",sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  text-align: center;
+}
+.btm-footer a,p{
+color: white;
+margin-top: 10px;
+cursor: pointer;
+}
+.para{
+width: 95%;
+margin: auto;
 }
