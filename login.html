@@ -49,15 +49,15 @@
     <!-- Navigation bar -->
     <div class="nav">
         <div class="list">
-            <div>mobiles & tablests<i class="fa-solid fa-angle-down"></i></li></div>
-            <div>televisions<i class="fa-solid fa-angle-down"></i></li></div>
+            <a href="mobile.html"><div>mobiles & tablests<i class="fa-solid fa-angle-down"></i></li></div></a>
+            <a href="tv.html"><div>televisions<i class="fa-solid fa-angle-down"></i></li></div></a>
             <div>audio<i class="fa-solid fa-angle-down"></i></li></div>
             <div>home appliances<i class="fa-solid fa-angle-down"></i></li></div>
-            <div>computers<i class="fa-solid fa-angle-down"></i></li></div>
-            <div>cameras<i class="fa-solid fa-angle-down"></i></li></div>
+            <a href="laptop.html"><div>computers<i class="fa-solid fa-angle-down"></i></li></div></a>
+            <a href="camera.html"><div>cameras<i class="fa-solid fa-angle-down"></i></li></div></a>
             <div>kitchen appliances<i class="fa-solid fa-angle-down"></i></li></div>
             <div>personal care<i class="fa-solid fa-angle-down"></i></li></div>
-            <div>accessories<i class="fa-solid fa-angle-down"></i></li></div>
+            <a href="accessories.html"><div>accessories<i class="fa-solid fa-angle-down"></i></li></div></a>
         </div>
     </div>
 
@@ -160,6 +160,19 @@
     </div>
 </body>
 </html>
+
 <script>
+    let lsdata = localStorage.getItem('data') || []
+    document.querySelector('form').addEventListener('submit',myfun)
+
+    function myfun(event){
+        event.preventDefault()
+
+        let mbl=document.querySelector('#mobile').value;
+        localStorage.setItem('data', mbl)
+        window.location.href='./register.html'
+    }
     
+    
+
 </script>

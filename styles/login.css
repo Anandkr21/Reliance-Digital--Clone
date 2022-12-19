@@ -158,6 +158,9 @@ cursor: pointer;
 
 
 }
+.list a{
+  text-decoration: none;
+}
 .list div{
   
   list-style: none;

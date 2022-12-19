@@ -141,6 +141,9 @@ padding: 10px;
     width: 100%;
     background-color: #003380;
   }
+  .list a{
+    text-decoration: none;
+  }
   .nav .list{
     margin: auto;
     width: 98%;

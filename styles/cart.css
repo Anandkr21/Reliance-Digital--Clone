@@ -30,11 +30,7 @@
      width: 20px;
      
    }
-   span{
-     margin-left: 5px;
-     color: white;
-     
-   }
+  
    .search{
      width: 100%;
      height: 70px;
@@ -149,6 +145,9 @@
      border: 2px solid #e42529;
    
    }
+   .list a{
+    text-decoration: none;
+  }
    .list div{
      
      list-style: none;
@@ -221,22 +220,25 @@
 /* cart section  */
 .cart-section{
     width: 100%;
-    height: auto;
+    height: 100%;
     background-color: rgb(245, 247, 247);
-    display: flex;
+
 }
 .seperate{
     width: 95%;
-    height: 400px;
+    height: 100%;
     margin: 20px auto;
     display: flex;
     justify-content: space-between;
     /* border: 2px solid black; */
+    
 }
 .cart{
     width: 65%;
-    height: 400px;
+    height: 100%;
+    margin-bottom: 20px;
     /* border: 3px solid green; */
+    
 }
 .cart-qty{
     width: 100%;
@@ -261,14 +263,60 @@
 }
 .cart-product{
     width: 100%;
-    height: 300px;
+    height: auto;
     margin-top: 20px;
-    background-color: white;
-    border: 2px solid #ddd;
     border-radius: 3px;
+    margin-bottom: 20px;
+    /* border: 2px solid red; */
+    
+}
+.cart-product .watch-div{
+  height: 360px;
+  border: 2px solid red;
+  margin-bottom: 30px;
+  background-color: white;
+  border: 2px solid #ddd;
+
+
+}
+.cart-product .watch-div img{
+width: 25%;
 }
 
+.title{
+width: 70%  ;
+  margin-top: 20px;
+ color: #1366e1;
+font-size: 14px;
+height: 3.6em;
+line-height: 1.5em;
+font-weight: 500;
+font-family: Roboto,"system-ui",sans-serif;
+}
+.price{
+  margin-top: -35px;
+  margin-bottom: 10px;
+  font-family: Roboto,"system-ui",sans-serif;
+   line-height: 1.4em;
+   font-weight: 500;
+     color: #000;
+     font-size: 19px;
+    margin-left: 60px;
 
+}
+button{
+padding: 9px 16px;
+border: none;
+margin-left: 20px;
+color:white;
+background-color: rgb(17, 90, 250);
+border-radius: 3px;
+cursor: pointer;
+}
+button:hover{
+  background-color: rgb(23, 82, 209);
+
+}
             /* checkout section    */
 .checkout-section{
     width: 30%;
@@ -286,25 +334,31 @@
     border: none;
     border-radius: 5px;
     margin-bottom: 20px;
+    margin-left: 0px;
     cursor: pointer;
+}
+.btn>button:hover{
+  background-color: #e83538;
+
 }
 .checkout-detail{
     margin: auto;
     width: 100%;
-    height: 100%;
+    height: 350px;
     background-color: white;
     border: 2px solid #ddd;
 
 }
 input[type='text']{
     width: 70%;
-    height: 8.8%;
+    height: 33px;
     margin-left: 19px;
     margin-top: 30px;
+    /* border: 4px solid red; */
 }
 .apply-code{
     width: 20%;
-    height: 10%;
+    height: 11%;
     margin-left: -5px;
     background-color: transparent;
     border: 0.1px solid  black;
@@ -312,9 +366,12 @@ input[type='text']{
     font-weight: 650;
     cursor: pointer;
     letter-spacing: 0.5px;
-    border-left: 4px solid rgb(23, 116, 239);;
+    border-left: 4px solid rgb(23, 116, 239);
     font-family: Roboto,"system-ui",sans-serif;
     text-transform: uppercase;
+}
+.apply-code:hover{
+background-color: transparent;
 }
 .hr{
     
@@ -348,8 +405,9 @@ input[type='text']{
     margin-left: -190px;
     margin-top: 2px;
 }
-.p{
-    margin-left: 50px;
+#p{
+    margin-left: 30px;
+   
 }
 .ttl{
     margin-top: 10px;
@@ -358,7 +416,9 @@ input[type='text']{
     float: right;
 }
 
-
+span{
+  color: black;
+}
 #price-detail div ul li{
     margin-top: 10px;
     list-style: none;
@@ -433,7 +493,7 @@ h6{
     color: rgb(172, 167, 167);
   }
   #head{
-    font-size: 20px;
+    font-size: 18px;
     font-weight: bold;
   }
  .bottom-footer{
