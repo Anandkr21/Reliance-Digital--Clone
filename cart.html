@@ -11,7 +11,6 @@
     <link rel="stylesheet" href="./styles/cart.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-
 </head>
 <body>
     <table>
@@ -43,7 +42,7 @@
         </div>
         <div class="rightnav">
             <ul>
-                <li><a href=""><i class="fa-solid fa-location-dot"></i>Deliver to Hyderabad 500070</a><span> | </span></li>
+                <li><a href=""><i class="fa-solid fa-location-dot"></i>Deliver to Hyderabad 500070</a><span style="color: white;"> | </span></li>
                 <li><a href="login.html"><i class="fa-solid fa-user"></i>Login</a></li>
             </ul>
         </div>
@@ -52,15 +51,15 @@
     <!-- Navigation bar -->
     <div class="nav">
         <div class="list">
-            <div>mobiles & tablests<i class="fa-solid fa-angle-down"></i></li></div>
-            <div>televisions<i class="fa-solid fa-angle-down"></i></li></div>
+            <a href="mobile.html"><div>mobiles & tablests<i class="fa-solid fa-angle-down"></i></li></div></a>
+            <a href="tv.html"><div>televisions<i class="fa-solid fa-angle-down"></i></li></div></a>
             <div>audio<i class="fa-solid fa-angle-down"></i></li></div>
             <div>home appliances<i class="fa-solid fa-angle-down"></i></li></div>
-            <div>computers<i class="fa-solid fa-angle-down"></i></li></div>
-            <div>cameras<i class="fa-solid fa-angle-down"></i></li></div>
+            <a href="laptop.html"><div>computers<i class="fa-solid fa-angle-down"></i></li></div></a>
+            <a href="camera.html"><div>cameras<i class="fa-solid fa-angle-down"></i></li></div></a>
             <div>kitchen appliances<i class="fa-solid fa-angle-down"></i></li></div>
             <div>personal care<i class="fa-solid fa-angle-down"></i></li></div>
-            <div>accessories<i class="fa-solid fa-angle-down"></i></li></div>
+            <a href="accessories.html"><div>accessories<i class="fa-solid fa-angle-down"></i></li></div></a>
         </div>
     </div>
 
@@ -70,13 +69,50 @@
     <div class="cart-section">
         <div class="seperate">
             <div class="cart">
-                
+                <div class="cart-qty">
+                    <div><h4>Total Cart Items: <span id="ttl-prdt"></span></h4></div>
+                    <div><h4>Shipping to 500070<i class="fa-solid fa-location-dot"></i> </h4></div>
+                </div>
+                <div class="cart-product">
+                    <!------------------ all data should be append here  -------------->
+
+                </div>
             </div>
+
+            <!-- checkout section  -->
             <div class="checkout-section">
                 <div class="btn">
-                    <button>checkout</button>
+                    <button onclick="placed()">checkout</button>
                 </div>
-                
+                <div class="checkout-detail">
+                    <input type="text" name="" id="coupon" placeholder="Coupon Code">
+                    <button class="apply-code">apply</button>
+                    <hr class="hr">
+                    <div id="price-detail">
+                        <div>
+                            <ul>
+                                <li class="price-list">PRICE DETAILS</li>
+                                <li>Coupon </li>
+                                <li>Delivery Charges</li>
+                                <hr class="hr">
+
+                                <li class="ttl">Amount Payable</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <ul class="rupee">
+                                <li>In Rupees</li>
+                                <li id="applied" style="font-size: 17px;">&nbsp</li>
+                                <li id="p" style="font-size: 20px; color: rgb(36, 186, 36);">Free</li> 
+                                <hr class="hr">
+                                <li id="total"></li>  
+                            </ul>
+                            <hr id="hr">
+                        </div>
+                    </div>
+
+                </div>
+                <h6>Safe and Secure Payments. Easy returns. 100% Authentic products.</h6>
             </div>
         </div>
     </div>
@@ -170,4 +206,122 @@
 </html>
 <script>
     
+    let cartdata=JSON.parse(localStorage.getItem('cart')) || []
+    display(cartdata)
+
+    function display(cartdata){
+  document.querySelector('.cart-product').textContent=null;
+  document.querySelector('#ttl-prdt').textContent=cartdata.length;
+
+  cartdata.forEach((el,ind) => {
+    
+    let div =document.createElement('div')
+    div.setAttribute('class','watch-div')
+
+    let img=document.createElement('img')
+    img.setAttribute('class','imgdiv')
+    img.setAttribute('src',el[0].avatar)
+
+    let title=document.createElement('h4')
+    title.setAttribute('class','title')
+    title.textContent=el[0].title;
+    
+    let price=document.createElement('h4')
+    price.setAttribute('class','price')
+    price.textContent= '₹ '+el[0].price;
+   
+    //Qty. decreaseing button
+    let dec=document.createElement('button')
+      dec.textContent='-';
+
+      dec.addEventListener('click', function(){
+        if(qt.textContent<=1){
+          cartdata.splice(ind,1)
+
+          localStorage.setItem('cart',JSON.stringify(cartdata))
+          window.location.reload();
+        }
+        else{
+          el[1]--;
+          total-=Number(el[0].price);
+
+          document.querySelector('#total').textContent=total;
+
+          localStorage.setItem('cart',JSON.stringify(cartdata))
+          qt.textContent--;
+        }
+      })
+
+      //Qty. initializing by 1
+      let qt=document.createElement('span')
+      qt.textContent=el[1];
+      
+      qt.style.border='1px solid #ddd'
+      qt.style.padding='7px 17px'
+      qt.style.marginLeft='20px'
+
+      //Qty. increasing button
+      let inc=document.createElement('button')
+      inc.textContent='+';
+
+      inc.addEventListener('click', function(){
+        el[1]++;
+        total+=Number(el[0].price);
+        document.querySelector('#total').textContent=total;
+
+        qt.textContent++
+        localStorage.setItem('cart',JSON.stringify(cartdata))
+      })
+
+
+    let ofr=document.createElement('p')
+    ofr.setAttribute('class','ofrprice')
+    ofr.textContent='Offer Price'
+
+    let btn=document.createElement('button')
+    btn.textContent="Remove"
+    btn.addEventListener('click', function (){
+        cartdata.splice(el,1)
+        localStorage.setItem('cart',JSON.stringify(cartdata))
+        window.location.reload();
+    })
+
+
+    div.append(img,title,ofr,price,dec,qt,inc,btn)
+    document.querySelector('.cart-product').append(div)
+  });
+}
+
+    let total=cartdata.reduce((acc,el)=> acc+ Number(el[0].price),0)
+    document.querySelector('#total').textContent=total;
+
+
+    document.querySelector('.apply-code').addEventListener('click',applied)
+    function applied(){
+        let cpn=document.querySelector('#coupon').value
+        if(cpn=='anand50'){
+            
+            document.querySelector('#applied').textContent="Applied 🥳"
+            document.querySelector('#applied').style.color='rgb(36, 186, 36)'
+           
+            
+        }else{
+            document.querySelector('#applied').textContent="Invalid"
+            document.querySelector('#applied').style.color='red'
+        }
+    }
+
+
+
+function placed(){
+    alert('Order Placed with ❤')
+    window.location='orderplaced.html'
+}
+ 
+  if(cartdata.length==0){
+    window.location='emptyCart.html'
+  }
+
+
+
 </script>

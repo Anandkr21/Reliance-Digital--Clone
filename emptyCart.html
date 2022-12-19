@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Electronic Shoping Store</title>
+    <link rel="icon" href="./imagee/Digital.png" type="image/icon type">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="./styles/cart.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+    /* box-sizing: border-box; */
+   
+   }
+  table{
+    width: 100%;
+    height: 40px;
+    background-color: #e42529;
+    text-transform: uppercase;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    font-family: Roboto,"system-ui",sans-serif;
+    font-weight: 400;
+    border-bottom: 1px solid hsla(0,0%,100%,.3);
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: rgba(255, 255, 255, 0.3);
+  }
+  th{
+        border-right: 1px solid  rgba(255, 255, 255, 0.3);;
+
+  }
+
+   
+   i{
+    padding: 10px;
+     width: 20px;
+     
+   }
+  
+   .search{
+     width: 100%;
+     height: 70px;
+     background-color: #e42529;
+   }
+   .logo img{
+     width: 130%;
+   }
+   
+   /* search bar  */
+   #f{
+     background-position: center;
+     background-size: cover;
+     width: 100%;
+     height: 300px;
+     margin-bottom: 50px;
+   }
+   .searchbtn i{
+     margin-top: -29px;
+     padding: 2px;
+     margin-left: 500px;
+     color: grey;
+   }
+   .box{
+     margin-left: 60px;
+     margin-top: 5px;
+     position: absolute;
+     top: 8%;
+     left: 20%;
+     background:white;
+     width: 500px;
+     height: 8px;
+     padding: 15px;
+     border-radius:70px ;
+     display: flex;
+     justify-content: space-between;
+     /* border: 2px solid orange; */
+   }
+   
+   #input{
+     width: 670px;
+     height: 25px;
+     font-size: 15px;
+     border: none;
+     outline: none;
+     /* border: 2px solid orange; */
+   }
+   .searchbtn{
+     margin-left: -500px;
+     
+   }
+   #input[type='text']{
+     margin-top: -10px;
+   
+   }
+   
+   .search{
+     display: flex;
+     justify-content: space-around;
+   }
+   
+   /* right navigation  */
+   .rightnav{
+     width: 800px;
+     display: flex;
+     text-align: right;
+     /* border: 2px solid blue; */
+    
+   }
+   .rightnav ul{
+     display: flex;
+     justify-content: space-around;
+     list-style: none;
+     font-size: 14px;
+    font-family: Roboto,"system-ui",sans-serif;
+    font-weight: 400;
+    margin-left: 100px;
+    margin-top: 19px;
+    /* border: 3px solid black; */
+
+   }
+   .rightnav li a{
+   margin-top: 8px;
+   color: white;
+   font-weight: bold;
+   text-decoration: none;
+   cursor: pointer;
+   }
+   .rightnav i{
+     padding: 10px;
+   }
+   
+   
+   /* Navigation bar  */
+   .nav{
+     width: 100%;
+     background-color: #003380;
+   }
+   .nav .list{
+     margin: auto;
+     width: 98%;
+     align-items: center;
+     display: flex;
+     justify-content:space-between;
+     background-color: #003380;
+     height: 40px;
+     gap: 2px;
+   }
+   .nav .list div:hover{
+     cursor: pointer;
+     background-color: #e42529;
+     border: 2px solid #e42529;
+   
+   }
+   .list a{
+    text-decoration: none;
+  }
+   .list div{
+     
+     list-style: none;
+     text-transform: uppercase;
+     color: white;
+     font-size: 13px;
+     font-family:  Roboto,"system-ui",sans-serif;
+     letter-spacing: 1px;
+     font-weight: 600;
+     padding: 6px 0px;
+   }
+   .nav .list div i{
+     padding: 6px;
+   }
+
+
+   /* cart section  */
+.cart-section{
+    width: 100%;
+    height: 400px;
+    background-color: rgb(245, 247, 247);
+}
+.cart-section img{
+    margin-top: 40px;
+    margin-left: 43%;
+}
+h4{
+  color: rgb(102, 102, 102);
+  font-size: 22px;
+  font-weight: 400;
+  font-family: Roboto,"system-ui",sans-serif;
+  margin-left: 40%;
+  margin-bottom: 40px;
+}
+.continue{
+    padding: 13px 30px;
+    text-transform: uppercase;
+    background-color: #d21518;
+    color: white;
+    font-size: 15px;
+    font-weight:550;
+    letter-spacing: 0.9px;
+    border: none;
+    border-radius: 5px;
+    margin-left: 41%;
+    cursor: pointer;
+}
+.continue:hover{
+  background-color: #d43d40;
+}
+
+   
+   /* footer part goes here  */
+/* footer part goes here  */
+
+.footer-main{
+    width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    background-color: #003380;
+  }
+
+  .footer-main div:nth-child(1){
+    width: 25%;
+    height: 300px;
+    /* border: 2px solid red; */
+  }
+  .footer-main div:nth-child(2){
+    width: 25%;
+    height: 300px;
+    /* border: 2px solid red; */
+  }
+  .footer-main div:nth-child(3){
+    width: 25%;
+    height: 300px;
+    /* border: 2px solid red; */
+  }
+  .footer-main div:nth-child(4){
+    width: 25%;
+    height: 300px;
+    /* border: 2px solid red; */
+  }
+  .footer-main div{
+    margin: 20px;
+  }
+  .footer-main div ul li{
+    
+    color: white;
+    text-decoration: none;
+    list-style-type: none;
+    padding: 5px;
+    font-family: Roboto,"system-ui",sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+
+  }
+  .footer-main div ul li:hover{
+    cursor: pointer;
+    color: rgb(172, 167, 167);
+  }
+  #head{
+    font-size: 20px;
+    font-weight: bold;
+  }
+ .bottom-footer{
+  width: 100%;
+  height: 40px;
+  display: flex;
+  background-color: #003380;
+ }
+
+.bottom-footer div:nth-child(1){
+  width: 25%;
+  height: 40px;
+  margin-left: 20px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1em;
+  margin-bottom: 4px;
+  text-transform: uppercase;
+  font-family: Roboto,"system-ui",sans-serif;
+
+
+}
+
+.bottom-footer div:nth-child(2){
+  width: 50%;
+  height: 30px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1em;
+  margin-bottom: 4px;
+  text-transform: uppercase;
+  font-family: Roboto,"system-ui",sans-serif;
+}
+
+.icon{
+  width: 100%;
+  height: 40px;
+  background-color: #003380;
+  display: flex;
+  cursor: pointer;
+}
+.icon div:nth-child(1){
+  margin-left: 20px;
+  width: 25%;
+  height: 40px;
+  margin-top: -10px;
+  cursor: pointer;
+}
+.icon div:nth-child(2){
+  cursor: pointer;
+  width: 40%;
+  height: 40px;
+  
+}
+i{
+  color: white;
+}
+
+#app{
+  display: flex;
+  margin-left: 10px;
+  gap: 10px;
+}
+#app div:nth-child(1) img{
+  margin-left: -30px;
+  width: 100%;
+  height: 100%;
+}
+#app div:nth-child(2) img{
+  margin-top: -10px;
+  margin-left: -30px;
+  width: 70%;
+  height: 100%;
+}
+
+.btm-footer{
+  width: 100%;
+  height: 150px;
+  background-color: #0a244a;
+    font-family: Roboto,"system-ui",sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+}
+.btm-footer a,p{
+  color: white;
+  margin-top: 10px;
+  cursor: pointer;
+}
+.para{
+  width: 95%;
+  margin: auto;
+}
+
+
+    </style>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>our brand</th>
+                <th><i class="fa-sharp fa-solid fa-arrow-right-arrow-left"></i>easy return</th>
+                <th><i class="fa-solid fa-truck"></i>next day delivery</th>
+                <th>service guarntee</th>
+                <th><i class="fa-solid fa-globe"></i>unmatched network </th>
+                <th><i class="fa-solid fa-location-dot"></i> find a store</th>
+                <th>contact us</th>
+            </tr>
+        </thead>
+    </table>
+
+    <!-- Search bar  -->
+    <div class="search">
+        <div class="logo">
+            <a href="index.html"><img src="./imagee/Digital.png" alt=""></a>
+        </div>
+        <div id="f">
+                <div class="box">
+                    <input type="text" id="input" placeholder="Find your favourite products">
+                    <div class="searchbtn">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                </div>
+        </div>
+        <div class="rightnav">
+            <ul>
+                <li><a href=""><i class="fa-solid fa-location-dot"></i>Deliver to Hyderabad 500070</a><span style="color: white;"> | </span></li>
+                <li><a href="login.html"><i class="fa-solid fa-user"></i>Login</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Navigation bar -->
+    <div class="nav">
+        <div class="list">
+            <a href="mobile.html"><div>mobiles & tablests<i class="fa-solid fa-angle-down"></i></li></div></a>
+            <a href="tv.html"><div>televisions<i class="fa-solid fa-angle-down"></i></li></div></a>
+            <div>audio<i class="fa-solid fa-angle-down"></i></li></div>
+            <div>home appliances<i class="fa-solid fa-angle-down"></i></li></div>
+            <a href="laptop.html"><div>computers<i class="fa-solid fa-angle-down"></i></li></div></a>
+            <a href="camera.html"><div>cameras<i class="fa-solid fa-angle-down"></i></li></div></a>
+            <div>kitchen appliances<i class="fa-solid fa-angle-down"></i></li></div>
+            <div>personal care<i class="fa-solid fa-angle-down"></i></li></div>
+            <a href="accessories.html"><div>accessories<i class="fa-solid fa-angle-down"></i></li></div></a>
+        </div>
+    </div>
+
+<div class="cart-section">
+    <div>
+        <img src="https://www.reliancedigital.in/build/client/images/emptycart.png" alt="">
+        <h4>Your Shoping Cart is Empty</h4>
+    </div>
+    <div>
+        <a href="index.html"><button class="continue">continue Shopping</button></a>
+    </div>
+</div>
+
+  
+
+    <!-- footer start from heree -->
+    <div class="footer-main">
+        <div>
+            <ul>
+                <li id="head">PRODUCT CATEGORIES</li>
+                <li>Smartphones</li>
+                <li>Laptops</li>
+                <li>DSLR Cameras</li>
+                <li>Televisions</li>
+                <li>Air Conditioners</li>
+                <li>Refrigerators</li>
+                <li>Kitchen Appliances</li>
+                <li>Accessories</li>
+                <li>Personal Care & Grooming</li>
+            </ul>
+        </div>
+        <div>
+            <ul>
+                <li id="head">SITE INFO</li>
+                <li>About Reliance Digital</li>
+                <li>resQ Services</li>
+                <li>Site Map</li>
+                <li>Gift Cards</li>
+                <li>Corporate Enquries</li>
+                <li>Contact Us</li>
+            </ul>
+        </div>
+        <div>
+            <ul>
+                <li id="head">RESOURCE CENTRE</li>
+                <li>Product Reviews</li>
+                <li>Buying Guides</li>
+                <li>How Tos</li>
+                <li>Featured Stories</li>
+                <li>Events & Happenings</li>
+            </ul>
+        </div>
+        <div>
+            <ul>
+                <li id="head">POLICIES</li>
+                <li>Terms of Use</li>
+                <li>FAQs</li>
+                <li>Cancellation and Return Policy</li>
+                <li>Pricing and Payments Policy</li>
+                <li>Shipping and Delivery Policy</li>
+                <li>Privacy Policy</li>
+                <li>E-waste Recycling Policy</li>
+                <li>EMI and Additional Cashback T&C</li>
+                <li>RelianceOne Loyalty Program T&C</li>
+                <li>Caution Notice</li>
+            </ul>
+        </div>
+    </div>
+   
+        
+    <div class="icon">
+        <div>
+            <i class="fa-brands fa-square-facebook"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-youtube"></i>
+        </div>
+        <div id="app">
+            <div>
+                <img src="https://www.reliancedigital.in/build/client/images/google_play_store.png" alt="">
+            </div>
+            <div>
+                <img src="https://www.reliancedigital.in/build/client/images/ios_app_store_icon.png" alt="">
+            </div>
+        </div>
+    </div>
+
+    <div class="btm-footer">
+        <a href="">Disclaimer</a>
+        <div class="para">
+            <p>Product prices, offers and availability are subject to change from time to time. All prices are inclusive of taxes. Product colours & images are only for illustration and they may not exactly match with the actual product. Product specs are subject to change & may vary from actual product. While every care is taken to avoid inaccuracies in content, these are provided as is, without warranty of any kind.</p>
+        </div>
+        
+        <p>© 2022 Reliance Digital. All Rights Reserved.</p>
+    </div>
+</body>
+</html>

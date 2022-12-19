@@ -66,6 +66,7 @@ span{
   margin-top: -29px;
   padding: 2px;
   margin-left: 500px;
+  color: grey;
 }
 .box{
   margin-left: 60px;
@@ -157,6 +158,9 @@ cursor: pointer;
 
 
 }
+.list a{
+  text-decoration: none;
+}
 .list div{
   
   list-style: none;
@@ -172,7 +176,9 @@ cursor: pointer;
      padding: 6px;
    }
 
-   /* Log in part goes here  */
+
+
+        /* Log in part goes here  */
 
 .login-page{
     width: 100%;
