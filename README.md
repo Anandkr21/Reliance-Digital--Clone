@@ -10,7 +10,7 @@ User can click on any product to get more information about it and add it to the
 
 User Product fetching is done using <u>**_API_**</u>. The cart ( products and their quantity ) is also simultaneously updated in the backend.
 
-**_Visit [here](https://verdant-cactus-906300.netlify.app/)._**
+**_Visit [here](https://thunderous-concha-290ec1.netlify.app/)._**
 
 
 ## Features
