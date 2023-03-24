@@ -1,9 +1,10 @@
 # sore-caption-4223
 ![Digital](https://user-images.githubusercontent.com/113422735/220388821-abf4fd28-aed1-4b6a-909e-e6a40d543656.png)
 
-# E-commerce Website <a href="https://verdant-cactus-906300.netlify.app/">Digital World</a>
+# E-commerce Website <a href="https://thunderous-concha-290ec1.netlify.app/">Digital World</a>
 
-This website is clone of <a href="https://verdant-cactus-906300.netlify.app/">Reliance Digital.com</a>. So the user can order all kind of electronic item and can get deliver at home with exciting deals and offer.
+
+This website is clone of <a href="https://thunderous-concha-290ec1.netlify.app/">Reliance Digital.com</a>. So the user can order all kind of electronic item and can get deliver at home with exciting deals and offer.
 
 User can click on any product to get more information about it and add it to their shopping cart, proceed to payment page, hence completing the flow of the website.
 
